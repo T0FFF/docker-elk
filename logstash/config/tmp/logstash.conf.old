@@ -1,0 +1,13 @@
+input {
+  stdin {
+      type => "syslog"
+    }
+}
+output {
+  stdout {codec => rubydebug }
+   elasticsearch {
+          host => "localhost"
+          port => 9200
+          protocol => http
+       }
+}
